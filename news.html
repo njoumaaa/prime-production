@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 350px;
+            height: 400px;
+            background-color: white;
+            margin: 10px;
+            box-shadow: 0 0 10px gray;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .card:hover{
+            box-shadow: 0 0 20px gray;
+            transform: translateY(-5px);
+        }
+        .photo{
+            height: 200px;
+            width: 100%;
+            background-color: #f5f5f5;
+        }
+        .photo img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .txt1{
+            margin: auto;
+            font-size: 25px;
+            color: #333;
+            font-weight: bold;
+        }
+        .txt2{
+            margin: auto;
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+        .card:hover > .photo{
+            height: 180px;
+            animation: move 0.5s ease both;
+        }
+        @keyframes move{
+            0%{height: 200px}
+            100%{height: 180px}
+        }
+        .video{
+            height: 200px;
+            width: 100%;
+        }
+        .video video{
+            height: 100%;
+            width: 100%;
+        }
+        section{
+            margin-left: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        p{
+            margin-left: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #18272F;
+            font-weight: 700;
+            position: relative;
+        }
+
+        a::before {
+            content: '';
+            background-color: hsla(196, 61%, 58%, .75);
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            width: 100%;
+            height: 8px;
+            z-index: -1;
+            transition: all .3s ease-in-out;
+        }
+
+        a:hover::before {
+            bottom: 0;
+            height: 100%;
+        }
+        a[href=""]::before {
+            content: '';
+        }
+        a[href=""]::before {
+            content: ' ';
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <div class="photo"><img src="logo.jpg" alt=""></div>
+            <div class="txt1"><p>prime production logo</p></div>
+            <div class="txt2"><p><br>This is a our new logo</p></div>
+        </div>
+        <div class="card">
+            <div class="video"><video src="coming.mp4" alt="" autoplay muted></video></div>
+            <div class="txt1"><p>Coming Soon</p></div>
+            <div class="txt2"><p><br>We are preparing many productions, some of which have begun filming and others that are in the process of programming and preparing . follow us to receive all news .</p></div>
+        </div>
+        <div class="card">
+            <div class="photo"><img src="form.jpeg" alt=""></div>
+            <div class="txt1"><p>form is ready</p></div>
+            <div class="txt2"><p><br>if you want to join us </p><br><a href="https://forms.gle/3LqFLmT4EFY3TAkX8"> click here</a></div>
+        </div>
+    </section>
+</body>
+</html>
+
